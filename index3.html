@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Wedding</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #fdf6f0;
+      color: #3a2e2e;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #f9e8d9 0%, #f0d5c8 50%, #e8c4b8 100%);
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "✦";
+      font-size: 80px;
+      color: rgba(180,120,100,0.15);
+      position: absolute;
+      top: 20px; left: 40px;
+    }
+    .hero::after {
+      content: "✦";
+      font-size: 80px;
+      color: rgba(180,120,100,0.15);
+      position: absolute;
+      bottom: 20px; right: 40px;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 7vw, 5rem);
+      color: #7a4f3a;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+    .hero .ampersand {
+      font-size: clamp(3rem, 8vw, 6rem);
+      color: #c08060;
+      display: block;
+      line-height: 1;
+      margin: 5px 0;
+    }
+    .hero .date {
+      font-size: 1.2rem;
+      color: #9a6a55;
+      margin-top: 20px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .hero .location {
+      font-size: 1rem;
+      color: #b08070;
+      margin-top: 8px;
+      font-style: italic;
+    }
+    .divider {
+      text-align: center;
+      color: #c08060;
+      font-size: 1.4rem;
+      letter-spacing: 0.5em;
+      margin: 30px 0;
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #7a4f3a;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+    section p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #5a4040;
+    }
+
+    /* DETAILS GRID */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .detail-card {
+      background: #fff8f4;
+      border: 1px solid #e8d0c0;
+      border-radius: 12px;
+      padding: 28px 20px;
+    }
+    .detail-card .icon { font-size: 2rem; margin-bottom: 10px; }
+    .detail-card h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.12em; color: #c08060; margin-bottom: 8px; }
+    .detail-card p { font-size: 0.95rem; color: #5a4040; line-height: 1.6; }
+
+    /* RSVP */
+    .rsvp-section {
+      background: linear-gradient(135deg, #f0d5c8, #e8c4b8);
+      border-radius: 16px;
+      padding: 50px 30px;
+      margin: 0 24px 60px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .rsvp-section h2 { color: #7a4f3a; margin-bottom: 12px; font-size: 2rem; }
+    .rsvp-section p { color: #6a4a3a; margin-bottom: 24px; }
+    .rsvp-section input, .rsvp-section select {
+      width: 100%;
+      padding: 12px 16px;
+      margin: 8px 0;
+      border: 1px solid #d0a898;
+      border-radius: 8px;
+      background: #fffaf8;
+      font-size: 1rem;
+      font-family: Georgia, serif;
+      color: #3a2e2e;
+    }
+    .rsvp-section button {
+      margin-top: 16px;
+      padding: 14px 40px;
+      background: #7a4f3a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: Georgia, serif;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      transition: background 0.2s;
+    }
+    .rsvp-section button:hover { background: #5a3525; }
+    .thank-you { display: none; color: #7a4f3a; font-size: 1.2rem; margin-top: 16px; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #b08070;
+      border-top: 1px solid #e8d0c0;
+    }
+
+    hr.fancy {
+      border: none;
+      border-top: 1px solid #e0c8b8;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Emma<span class="ampersand">&</span>James</h1>
+    <p class="date">Saturday, September 20, 2026</p>
+    <p class="location">The Garden Estate · Charleston, South Carolina</p>
+  </div>
+
+  <div class="divider">✦ ✦ ✦</div>
+
+  <!-- OUR STORY -->
+  <section>
+    <h2>Our Story</h2>
+    <p>
+      We met on a rainy Tuesday at a tiny bookshop neither of us planned to visit.
+      Two years, countless adventures, and one very persistent golden retriever later —
+      we're getting married, and we can't wait to celebrate with the people we love most.
+    </p>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- EVENT DETAILS -->
+  <section>
+    <h2>The Details</h2>
+    <div class="details-grid">
+      <div class="detail-card">
+        <div class="icon">💍</div>
+        <h3>Ceremony</h3>
+        <p>4:00 PM<br>The Garden Estate<br>Charleston, SC</p>
+      </div>
+      <div class="detail-card">
+        <div class="icon">🥂</div>
+        <h3>Cocktail Hour</h3>
+        <p>5:00 PM<br>The Terrace<br>Garden Estate</p>
+      </div>
+      <div class="detail-card">
+        <div class="icon">🎶</div>
+        <h3>Reception</h3>
+        <p>6:00 PM<br>The Grand Ballroom<br>Garden Estate</p>
+      </div>
+      <div class="detail-card">
+        <div class="icon">👗</div>
+        <h3>Dress Code</h3>
+        <p>Garden Party<br>Semi-Formal<br>Florals encouraged!</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- ACCOMMODATIONS -->
+  <section>
+    <h2>Stay With Us</h2>
+    <p>
+      We've reserved a room block at the <strong>Charleston Harbor Hotel</strong>
+      (5 min from the venue). Use code <strong>EMMA&JAMES26</strong> when booking
+      for a discounted rate. Please book by August 15, 2026.
+    </p>
+  </section>
+
+  <hr class="fancy">
+
+  <!-- RSVP -->
+  <div class="rsvp-section">
+    <h2>RSVP</h2>
+    <p>Please respond by July 1, 2026</p>
+    <input type="text" id="rsvp-name" placeholder="Your Full Name" />
+    <select id="rsvp-attending">
+      <option value="">Will you be attending?</option>
+      <option value="yes">Joyfully accepts ✓</option>
+      <option value="no">Regretfully declines</option>
+    </select>
+    <input type="number" id="rsvp-guests" placeholder="Number of guests (including yourself)" min="1" max="6"/>
+    <input type="text" id="rsvp-dietary" placeholder="Dietary restrictions (optional)" />
+    <br>
+    <button onclick="submitRSVP()">Send RSVP</button>
+    <p class="thank-you" id="thank-you-msg">🌸 Thank you! We can't wait to celebrate with you.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    Made with love · Emma & James · September 2026
+  </footer>
+
+  <script>
+    function submitRSVP() {
+      const name = document.getElementById('rsvp-name').value.trim();
+      const attending = document.getElementById('rsvp-attending').value;
+      if (!name || !attending) {
+        alert('Please fill in your name and attendance status.');
+        return;
+      }
+      document.getElementById('thank-you-msg').style.display = 'block';
+      document.getElementById('rsvp-name').value = '';
+      document.getElementById('rsvp-attending').value = '';
+      document.getElementById('rsvp-guests').value = '';
+      document.getElementById('rsvp-dietary').value = '';
+    }
+  </script>
+
+</body>
+</html>
